@@ -20,6 +20,8 @@
 		77D3253A24FBFE74006B1B39 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3253924FBFE74006B1B39 /* ThirdViewController.swift */; };
 		77D3253E24FBFF0D006B1B39 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3253D24FBFF0D006B1B39 /* Router.swift */; };
 		77D3254024FBFF32006B1B39 /* ViewControllerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3253F24FBFF32006B1B39 /* ViewControllerEnum.swift */; };
+		77D3975C24FCF07200DE4FDA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3975B24FCF07200DE4FDA /* Endpoint.swift */; };
+		77D3975E24FCF08D00DE4FDA /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3975D24FCF08D00DE4FDA /* NetworkStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		77D3253924FBFE74006B1B39 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		77D3253D24FBFF0D006B1B39 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		77D3253F24FBFF32006B1B39 /* ViewControllerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEnum.swift; sourceTree = "<group>"; };
+		77D3975B24FCF07200DE4FDA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		77D3975D24FCF08D00DE4FDA /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +100,10 @@
 		77D3253B24FBFEE1006B1B39 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				77D3975A24FCF05D00DE4FDA /* Enum */,
 				77D3253F24FBFF32006B1B39 /* ViewControllerEnum.swift */,
 				77C79E9724FC380C00193D93 /* AllExtension.swift */,
 				77C79E9B24FC3E6800193D93 /* NetworkManager.swift */,
-				77C79E9D24FC422F00193D93 /* NotificationCenterEnum.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -110,6 +114,16 @@
 				77D3253D24FBFF0D006B1B39 /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		77D3975A24FCF05D00DE4FDA /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				77C79E9D24FC422F00193D93 /* NotificationCenterEnum.swift */,
+				77D3975B24FCF07200DE4FDA /* Endpoint.swift */,
+				77D3975D24FCF08D00DE4FDA /* NetworkStatus.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,11 +200,13 @@
 				77D3252724FBFC26006B1B39 /* ViewController.swift in Sources */,
 				77C79E9E24FC422F00193D93 /* NotificationCenterEnum.swift in Sources */,
 				77C79E9C24FC3E6800193D93 /* NetworkManager.swift in Sources */,
+				77D3975E24FCF08D00DE4FDA /* NetworkStatus.swift in Sources */,
 				77D3253A24FBFE74006B1B39 /* ThirdViewController.swift in Sources */,
 				77C79E9824FC380D00193D93 /* AllExtension.swift in Sources */,
 				77D3252324FBFC26006B1B39 /* AppDelegate.swift in Sources */,
 				77D3253E24FBFF0D006B1B39 /* Router.swift in Sources */,
 				77D3254024FBFF32006B1B39 /* ViewControllerEnum.swift in Sources */,
+				77D3975C24FCF07200DE4FDA /* Endpoint.swift in Sources */,
 				77D3252524FBFC26006B1B39 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMj-cQ-xea">
-                                <rect key="frame" x="122" y="435" width="170.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMj-cQ-xea">
+                                <rect key="frame" x="20" y="435" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,7 +41,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r0O-JJ-uko" secondAttribute="bottom" constant="50" id="97k-Ec-vmf"/>
                             <constraint firstItem="FMj-cQ-xea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VzY-FS-Pjt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FMj-cQ-xea" secondAttribute="trailing" constant="20" id="bzP-5c-KTu"/>
                             <constraint firstItem="FMj-cQ-xea" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dKX-TG-v2Z"/>
+                            <constraint firstItem="FMj-cQ-xea" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kz3-R6-FVt"/>
                             <constraint firstItem="r0O-JJ-uko" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zTV-bf-u4I"/>
                         </constraints>
                     </view>
@@ -63,8 +65,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIc-Ni-p87">
-                                <rect key="frame" x="122" y="435" width="170.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIc-Ni-p87">
+                                <rect key="frame" x="20" y="435" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,10 +87,12 @@
                         <viewLayoutGuide key="safeArea" id="zEP-Z3-clz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="DIc-Ni-p87" firstAttribute="leading" secondItem="zEP-Z3-clz" secondAttribute="leading" constant="20" id="Da9-JD-Xdv"/>
                             <constraint firstItem="tMK-me-Fn2" firstAttribute="centerX" secondItem="kPy-Kk-Ked" secondAttribute="centerX" id="H09-rh-bnx"/>
                             <constraint firstItem="zEP-Z3-clz" firstAttribute="bottom" secondItem="tMK-me-Fn2" secondAttribute="bottom" constant="50" id="JcO-By-RwX"/>
                             <constraint firstItem="DIc-Ni-p87" firstAttribute="centerX" secondItem="kPy-Kk-Ked" secondAttribute="centerX" id="NbH-Hh-W6B"/>
                             <constraint firstItem="DIc-Ni-p87" firstAttribute="centerY" secondItem="kPy-Kk-Ked" secondAttribute="centerY" id="eYi-UB-aEf"/>
+                            <constraint firstItem="zEP-Z3-clz" firstAttribute="trailing" secondItem="DIc-Ni-p87" secondAttribute="trailing" constant="20" id="gIt-br-RY6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -108,8 +112,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-2h-TP9">
-                                <rect key="frame" x="122" y="435" width="170.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-2h-TP9">
+                                <rect key="frame" x="20" y="435" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -133,7 +137,9 @@
                             <constraint firstItem="FWq-Kr-4re" firstAttribute="centerX" secondItem="Idu-L0-8rZ" secondAttribute="centerX" id="1Mj-dY-Kfr"/>
                             <constraint firstItem="HYA-2h-TP9" firstAttribute="centerX" secondItem="Idu-L0-8rZ" secondAttribute="centerX" id="5gi-ge-Dwa"/>
                             <constraint firstItem="HYA-2h-TP9" firstAttribute="centerY" secondItem="Idu-L0-8rZ" secondAttribute="centerY" id="M6P-dw-8Ou"/>
+                            <constraint firstItem="HYA-2h-TP9" firstAttribute="leading" secondItem="2KL-Wo-3MU" secondAttribute="leading" constant="20" id="Nua-iW-uyP"/>
                             <constraint firstItem="2KL-Wo-3MU" firstAttribute="bottom" secondItem="FWq-Kr-4re" secondAttribute="bottom" constant="50" id="cPN-dr-Yr4"/>
+                            <constraint firstItem="2KL-Wo-3MU" firstAttribute="trailing" secondItem="HYA-2h-TP9" secondAttribute="trailing" constant="20" id="mEY-UU-vZJ"/>
                         </constraints>
                     </view>
                     <connections>

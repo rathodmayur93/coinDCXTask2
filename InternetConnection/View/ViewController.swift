@@ -23,7 +23,10 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //Setup Netwok Listener
+        NetworkManager.shared.networkDelegate = self
         NetworkManager.shared.checkConnection()
+        
     }
     
     //MARK:- UI Functions
@@ -34,58 +37,7 @@ class ViewController: UIViewController {
         
         // Setting up the next button
         nextBT.makeEdgesCircular()
-        
-        //Setup Netwok Listener
-        NetworkManager.shared.networkDelegate = self
-        
     }
-    
-    /*
-    //MARK:- Observers
-    //Setting up the network observer
-    private func setupObserver(){
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(updateConnectionStatus(_:)),
-                                               name: NotificationCenterEnum.online.getName(),
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(updateConnectionStatus(_:)),
-                                               name: NotificationCenterEnum.offline.getName(),
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(updateConnectionReachableStatus(_:)),
-                                               name: NotificationCenterEnum.onlineConnected.getName(),
-                                               object: nil)
-    }
-    
-    //MARK:- Notification Observer Action Methods
-    //Updating the label as per connection status
-    @objc func updateConnectionStatus(_ notification : NSNotification){
-        guard let connectionInfo = notification.userInfo else { return }
-        
-        DispatchQueue.main.async {
-            if((connectionInfo["status"] as? Bool) ?? false){
-                self.statusLabel.text = "We're Connected"
-                NetworkManager.shared.pingHost(Endpoint.google.getDomainURL())
-            }else{
-                self.statusLabel.text = "We're not connected"
-            }
-        }
-    }
-    
-    //Updating the label as per connection status
-    @objc func updateConnectionReachableStatus(_ notification : NSNotification){
-        guard let connectionInfo = notification.userInfo else { return }
-        
-        DispatchQueue.main.async {
-            if((connectionInfo["connectionStatus"] as? Bool) ?? false){
-                self.statusLabel.text = "We're Connected"
-            }else{
-                self.statusLabel.text = "We're connected but not reachable"
-            }
-        }
-    }
-    */
     
     //MARK:- IBAction Method
     @IBAction func nextBTAction(){
@@ -94,10 +46,11 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK:- Extension For Protocol NetworkConnectionStatus
 extension ViewController : NetworkConnectionStatus{
-    func netwokResult(result: String) {
+    func netwokResult(result: NetworkStatus) {
         DispatchQueue.main.async {
-            self.statusLabel.text = result
+            self.statusLabel.text = result.getStatusMessage()
         }
     }
 }

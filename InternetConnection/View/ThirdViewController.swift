@@ -23,6 +23,9 @@ class ThirdViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //Setting up the observer
+        NetworkManager.shared.networkDelegate = self
+        NetworkManager.shared.checkConnection()
     }
     
     //MARK:- UI Functions
@@ -36,6 +39,15 @@ class ThirdViewController: UIViewController {
     
     //MARK:- IBAction Method
     @IBAction func nextBTAction(_ sender: Any) {
-        //Router.navigateScreen(from: self, to: ViewControllerEnum.firstScreen.vcName())
+        
+    }
+}
+
+//MARK:- Extension
+extension ThirdViewController :  NetworkConnectionStatus{
+    func netwokResult(result: NetworkStatus) {
+        DispatchQueue.main.async {
+            self.statusLabel.text = result.getStatusMessage()
+        }
     }
 }

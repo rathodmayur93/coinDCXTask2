@@ -22,6 +22,8 @@ class SecondViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //Setting up the observer
+        NetworkManager.shared.networkDelegate = self
         NetworkManager.shared.checkConnection()
     }
     
@@ -31,41 +33,22 @@ class SecondViewController: UIViewController {
         //Setting up the navigation bar title
         self.title = "Second Screen"
         
-        //Setting up the observer
-        setupObserver()
-        
         // Setting up the next button
         nextBT.makeEdgesCircular()
-    }
-    
-    //Setting up the network observer
-    private func setupObserver(){
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(updateConnectionStatus(_:)),
-                                               name: NotificationCenterEnum.online.getName(),
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(updateConnectionStatus(_:)),
-                                               name: NotificationCenterEnum.offline.getName(),
-                                               object: nil)
-    }
-    
-    //Updating the label as per connection status
-    @objc func updateConnectionStatus(_ notification : NSNotification){
-        guard let connectionInfo = notification.userInfo else { return }
-        
-        DispatchQueue.main.async {
-            if((connectionInfo["status"] as? Bool) ?? false){
-                self.statusLabel.text = "We're Connected"
-            }else{
-                self.statusLabel.text = "We're not connected"
-            }
-        }
     }
     
     
     //MARK:- IBAction Method
     @IBAction func nextBTAction(_ sender: Any) {
         Router.navigateScreen(from: self, to: ViewControllerEnum.thirdScreen.vcName())
+    }
+}
+
+//MARK:- Extension For Protocol NetworkConnectionStatus
+extension SecondViewController : NetworkConnectionStatus{
+    func netwokResult(result: NetworkStatus) {
+        DispatchQueue.main.async {
+            self.statusLabel.text = result.getStatusMessage()
+        }
     }
 }
