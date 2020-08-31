@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17140" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ts4-5W-aCI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17115"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="InternetConnection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMj-cQ-xea">
+                                <rect key="frame" x="122" y="435" width="170.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0O-JJ-uko">
+                                <rect key="frame" x="117" y="762" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="4bo-5z-hiN"/>
+                                    <constraint firstAttribute="height" constant="50" id="arg-jj-ni4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextBTAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="eWW-PM-o40"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r0O-JJ-uko" secondAttribute="bottom" constant="50" id="97k-Ec-vmf"/>
+                            <constraint firstItem="FMj-cQ-xea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VzY-FS-Pjt"/>
+                            <constraint firstItem="FMj-cQ-xea" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dKX-TG-v2Z"/>
+                            <constraint firstItem="r0O-JJ-uko" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zTV-bf-u4I"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="First Screen" id="vDb-hA-kiL"/>
+                    <connections>
+                        <outlet property="nextBT" destination="r0O-JJ-uko" id="P7a-iA-hRO"/>
+                        <outlet property="statusLabel" destination="FMj-cQ-xea" id="LY3-W6-ucA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="744.92753623188412" y="136.60714285714286"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="mDY-LU-amE">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="iCQ-HT-WI7" customClass="SecondViewController" customModule="InternetConnection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPy-Kk-Ked">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIc-Ni-p87">
+                                <rect key="frame" x="122" y="435" width="170.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMK-me-Fn2">
+                                <rect key="frame" x="117" y="762" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="r9a-IX-Gkp"/>
+                                    <constraint firstAttribute="width" constant="180" id="rWo-Oy-xzH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextBTAction:" destination="iCQ-HT-WI7" eventType="touchUpInside" id="o9T-qJ-vn9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zEP-Z3-clz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tMK-me-Fn2" firstAttribute="centerX" secondItem="kPy-Kk-Ked" secondAttribute="centerX" id="H09-rh-bnx"/>
+                            <constraint firstItem="zEP-Z3-clz" firstAttribute="bottom" secondItem="tMK-me-Fn2" secondAttribute="bottom" constant="50" id="JcO-By-RwX"/>
+                            <constraint firstItem="DIc-Ni-p87" firstAttribute="centerX" secondItem="kPy-Kk-Ked" secondAttribute="centerX" id="NbH-Hh-W6B"/>
+                            <constraint firstItem="DIc-Ni-p87" firstAttribute="centerY" secondItem="kPy-Kk-Ked" secondAttribute="centerY" id="eYi-UB-aEf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextBT" destination="tMK-me-Fn2" id="1hK-LN-iUT"/>
+                        <outlet property="statusLabel" destination="DIc-Ni-p87" id="5bN-8X-CWn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75r-Kj-i1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="137"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="bFw-Qy-M7z">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="OQe-Xa-8c6" customClass="ThirdViewController" customModule="InternetConnection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Idu-L0-8rZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Status..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-2h-TP9">
+                                <rect key="frame" x="122" y="435" width="170.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWq-Kr-4re">
+                                <rect key="frame" x="117" y="762" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AMT-OD-bhl"/>
+                                    <constraint firstAttribute="width" constant="180" id="F31-8z-Aon"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextBTAction:" destination="OQe-Xa-8c6" eventType="touchUpInside" id="TFK-qy-GPM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2KL-Wo-3MU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FWq-Kr-4re" firstAttribute="centerX" secondItem="Idu-L0-8rZ" secondAttribute="centerX" id="1Mj-dY-Kfr"/>
+                            <constraint firstItem="HYA-2h-TP9" firstAttribute="centerX" secondItem="Idu-L0-8rZ" secondAttribute="centerX" id="5gi-ge-Dwa"/>
+                            <constraint firstItem="HYA-2h-TP9" firstAttribute="centerY" secondItem="Idu-L0-8rZ" secondAttribute="centerY" id="M6P-dw-8Ou"/>
+                            <constraint firstItem="2KL-Wo-3MU" firstAttribute="bottom" secondItem="FWq-Kr-4re" secondAttribute="bottom" constant="50" id="cPN-dr-Yr4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextBT" destination="FWq-Kr-4re" id="v43-tZ-iXk"/>
+                        <outlet property="statusLabel" destination="HYA-2h-TP9" id="cwj-uk-qfK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwX-d1-QMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2296" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J8t-zb-dAt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ts4-5W-aCI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hMO-WH-bxy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XAe-h3-6lV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RsW-cS-UHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165.21739130434784" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
